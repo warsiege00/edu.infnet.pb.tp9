@@ -10,23 +10,37 @@ namespace pb.tp9.Model
 
 		public Turma(int codigo, Disciplina disciplina, Professor professor)
 		{
+			
 			this.codigo = codigo;
 			this.disciplina = disciplina;
 			this.professor = professor;
+			this.alunos = new List<Aluno>();
 		}
 
-		public string addAluno(Aluno aluno) {
-
+		public string addAluno(Aluno aluno)
+		{
+			alunos.Add(aluno);
 			return "";
 		}
         public bool abriTurma()
         {
-			
-			return false;
+			return true;
         }
+
 		public string gerarPauta() {
 			return "";
 		}
+
+		public string addProfessor(Professor professor)
+		{
+			this.professor = professor;
+			return $"Professor {professor.Nome} adicionado a turma.";
+		}
+        public string addDisciplina(Disciplina disciplina)
+        {
+            this.disciplina = disciplina;
+            return $"Professor {professor.Nome} adicionado a turma.";
+        }
     }
 }
 

@@ -31,8 +31,10 @@ namespace pb.tp9.Model
             string resultado = $"Turmas do aluno {Nome}:\n";
             foreach (var turma in Turmas)
             {
-                resultado += $"Código da turma: {turma.codigo}, Disciplina: {turma.disciplina.Nome}\n";
-            }
+                resultado += $"Código da turma: {turma.codigo}, " +
+                    $"Disciplina: {turma.disciplina.Nome}, " +
+                    $"Professor: {turma.professor.Nome}\n";
+            }       
             return resultado;
         }
 	}
